@@ -13,6 +13,7 @@ function compareScores(scoreDolphins, scoreKoalas) {
         console.log(`No team wins the trophy!`);
     }
 }
+
 // Data 1
 var scoreDolphins = calculateAverage(96, 108, 89);
 var scoreKoalas = calculateAverage(88, 91, 110);
