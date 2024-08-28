@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background-color: #222;
+            color: #eee;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+        }
+        .number {
+            font-size: 6rem;
+            width: 15rem;
+            margin: 2rem auto;
+            border: 3px solid #eee;
+        }
+        .message {
+            font-size: 2rem;
+        }
+        .score {
+            font-size: 2rem;
+        }
+        .guess {
+            font-size: 2rem;
+            width: 5rem;
+            text-align: center;
+        }
+        .again {
+            font-size: 1.5rem;
+            padding: 0.5rem 2rem;
+            margin-top: 2rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Guess My Number!</h1>
+    <p class="message">Start guessing...</p>
+
+    <div class="number">?</div>
+
+    <label for="guess">Your Guess:</label>
+    <input type="number" class="guess" id="guess">
+
+    <p>💯 Score: <span class="score">20</span></p>
+
+    <button class="again">Again!</button>
+
+    <script src="../DOM and Events/challenge1.js"></script>
+</body>
+</html>
