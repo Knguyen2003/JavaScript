@@ -3,42 +3,26 @@
 // MSSV: 21068021
 // Description: Coding Challenge #1 Dom and Events
 
-
-/*
-Implement a game rest functionality, so that the player can make a new guess!
-Your tasks:
-1. Select the element with the 'again' class and attach a click event handler
-2. In the handler function, restore initial values of the 'score' and 
-'secretNumber' variables
-3. Restore the initial conditions of the message, number, score and guess input 
-fields
-4. Also restore the original background color (#222) and number width (15rem)
-*/
-
-// document.querySelector('.again').addEventListener('click', function(){
-//     score = 20;
-//     secretNumber = Math.trunc(Math.random()*20)+1;
-//     document.querySelector('.message').textContent = 'Start guessing...';
-//     document.querySelector('.number').textContent = '?';
-//     document.querySelector('.score').textContent = score;
-//     document.querySelector('.guess').value = '';
-//     document.querySelector('body').style.backgroundColor = '#222';
-//     document.querySelector('.number').style.width = '15rem';    
-// })
-
-
-
-document.querySelector('.again').addEventListener('click', function() {
-    let score = 20; //tạo biến score để lưu điểm
-    const secretNumber = Math.trunc(Math.random() * 20) + 1; //tạo biến secretNumber để lưu số bí mật
-  
-    
+document.querySelector('button.again').addEventListener('click', function(){
+    secretNumber = Math.trunc(Math.random()*20)+1;
     document.querySelector('.message').textContent = 'Start guessing...';
     document.querySelector('.number').textContent = '?';
-    document.querySelector('.score').textContent = score;
+    document.querySelector('.score').textContent = 0;
     document.querySelector('.guess').value = '';
-  
-    // Step 4: Restore original background color and number width
     document.querySelector('body').style.backgroundColor = '#222';
-    document.querySelector('.number').style.width = '15rem';
-  });
+    document.querySelector('.number').style.width = '15rem';   
+    document.querySelector('.number').style.height = '15rem'; 
+});
+document.querySelector('button.doan').addEventListener('click', function(){
+  secretNumber = Math.trunc(Math.random()*20)+1;
+  document.querySelector('.number').textContent = secretNumber;
+  if(secretNumber == Number(document.querySelector('.guess').value)){
+    document.querySelector('.message').textContent = 'Correct Number!';
+    document.querySelector('.number').textContent = secretNumber;
+    document.querySelector('.score').textContent = Number(document.querySelector('.score').textContent) + 1;
+    //textContent : gán giá trị cho thẻ, lấy giá trị của thẻ
+    //.value : dùng để lấy giá trị của thẻ input
+  }else{
+    document.querySelector('.message').textContent = 'Wrong Number!';
+  }
+});
