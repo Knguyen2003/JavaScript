@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Challenge 2</h1>
+    <span>Đây là Challenge2</span>
+    <p>Click vào body để thay đổi màu chữ</p>
+    <script>
+
+     (function () {
+            const header = document.querySelector('h1'); //
+            header.style.color = 'red';
+
+            // Adding event listener to body
+           document.body.addEventListener('click', function() {
+                header.style.color = 'blue';
+            });
+     })(); // IIFE: HÀM KHỞI TẠO NGAY LẬP TỨC
+     // IIFE: Immediately Invoked Function Expression
+    </script>
+</body>
+</html>
+
+<!--
+    Vì Sao Bạn Có Thể Thay Đổi Màu?
+
+Biến header được định nghĩa bên trong IIFE và có thể truy cập trong toàn bộ hàm đó, bao gồm cả hàm xử lý sự kiện.
+Khi bạn thêm sự kiện vào body, nó vẫn có thể sử dụng biến header từ hàm IIFE để thay đổi màu của <h1>.
+Tóm Tắt:
+
+Hàm IIFE được thực thi ngay lập tức và thiết lập màu đỏ cho <h1>.
+Trình lắng nghe sự kiện cho body được thiết lập trong cùng phạm vi với header, vì vậy nó có thể thay đổi màu của <h1> khi body được nhấp chuột.
+-->
+
