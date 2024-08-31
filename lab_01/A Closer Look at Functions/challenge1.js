@@ -3,7 +3,6 @@
 // MSSV: 21068021
 // Description: A Closer Look at Functions - Coding Challenge #1
 
-
 const poll = {
     question: "What is your favourite programming language?",
     options: ["0: JavaScript", "1: Python", "2: Rust", "3:  C++"],
