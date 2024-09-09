@@ -50,9 +50,5 @@ class EVCl extends CarCl {
 //Test data
 const rivian = new EVCl('Rivian', 120, 23);
 rivian.accelerate().brake().chargeBattery(90).accelerate(); //Sử dụng chaining
-//Output:
-// Rivian is going at 130 km/h
-// Rivian is going at 120 km/h
-// Battery is charging to 90
-// Rivian is going at 140 km/h with a charge of 89
+
 
